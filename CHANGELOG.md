@@ -19,3 +19,7 @@ Initial release of Paste and Upload.
 
 - Add an option to skip uploading existing files to S3. Useful when file names are generated based on the content hash.
 - Add an option to try downloading the original image when copying from browsers. This is useful for pasting animated images from browsers like Microsoft Edge, which only provide a static image in the clipboard.
+
+## 0.3.2
+
+- Add `paste-and-upload.s3.forcePathStyle` setting to support S3 compatible services that require path-style access.

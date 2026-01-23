@@ -38,7 +38,8 @@ The S3 settings are required if you want to upload images to S3. You can configu
   // Will be prepended to S3 object key (Slashes will be preserved as is)
   "paste-and-upload.s3.prefix": "img/",
   // Will be prepended to inserted link (Slashes will be preserved as is)
-  "paste-and-upload.s3.publicUrlBase": "https://cdn.duanyll.com/img/"
+  "paste-and-upload.s3.publicUrlBase": "https://cdn.duanyll.com/img/",
+  "paste-and-upload.s3.forcePathStyle": false
 }
 ```
 

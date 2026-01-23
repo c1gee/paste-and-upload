@@ -29,7 +29,8 @@ export class S3Uploader implements ResourceUploader {
             prefix: emptyToUndefined(s3Section.get<string>('prefix')),
             publicUrlBase: emptyToUndefined(s3Section.get<string>('publicUrlBase')),
             omitExtension: s3Section.get<boolean>('omitExtension'),
-            skipExisting: s3Section.get<boolean>('skipExisting')
+            skipExisting: s3Section.get<boolean>('skipExisting'),
+            forcePathStyle: s3Section.get<boolean>('forcePathStyle')
         };
         this.client = this.createClient();
     }
@@ -42,7 +43,8 @@ export class S3Uploader implements ResourceUploader {
         return new S3Client({
             region: this.s3Option.region,
             endpoint: this.s3Option.endpoint,
-            credentials
+            credentials,
+            forcePathStyle: this.s3Option.forcePathStyle
         });
     }
 

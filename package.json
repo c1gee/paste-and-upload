@@ -1,6 +1,6 @@
 {
   "name": "paste-and-upload",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publisher": "duanyll",
   "engines": {
     "vscode": "^1.97.0"
@@ -99,6 +99,11 @@
           "type": "boolean",
           "default": true,
           "description": "Skip uploading if the file already exists in the destination. Useful when file names are generated based on the content hash."
+        },
+        "paste-and-upload.s3.forcePathStyle": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use path-style addressing for S3 requests (e.g., https://endpoint/bucket/key instead of https://bucket.endpoint/key). Required for some S3-compatible services like MinIO."
         },
         "paste-and-upload.workspace.path": {
           "type": "string",
