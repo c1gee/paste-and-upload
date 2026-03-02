@@ -23,3 +23,7 @@ Initial release of Paste and Upload.
 ## 0.3.2
 
 - Add `paste-and-upload.s3.forcePathStyle` setting to support S3 compatible services that require path-style access.
+
+## 0.3.3
+
+- Fix dependency bundling issue #2
