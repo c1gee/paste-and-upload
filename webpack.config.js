@@ -47,14 +47,10 @@ const extensionConfig = {
         ]
       },
       {
-        // 专门处理 node_modules 中的 ESM 包
+        // Allow webpack to handle ESM packages in node_modules natively
         test: /\.m?js$/,
-        include: /node_modules\/(filesize|file-type)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+        resolve: {
+          fullySpecified: false
         }
       }
     ]
